@@ -15,6 +15,7 @@ def MA(df, n):
     return df
 # Exponential Moving Average
 def EMA(df, n):
+	df = MA(hist, 7)
     EMA = pd.Series(df['Close'].ewm(span=n, min_periods = 1).mean(), name='EMA_' + str(n))
     df = df.join(EMA)
     return df
