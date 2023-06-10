@@ -65,12 +65,22 @@ def main():
   #DATABASE_URI = 'postgres+psycopg2://username:password@localhost:5432/database_name'
   #engine = create_engine(DATABASE_URI)
   # Consulta SQL para obtener los datos filtrados
+
+  """---------------+--------
+ bitcoin       | BTC
+ ethereum      | ETH
+ ripple        | XRP
+ matic-network | MATIC
+ polkadot      | DOT"""
   if tempo ==1:
-    querry = f"SELECT * FROM half_hour ORDER BY date_price DESC LIMIT 90" # WHERE date_price >= '{start_date}'"# AND date_price <= '{close_date}'"
+    asset = "bitcoin"  # Asset seleccionado
+    query = f"SELECT * FROM half_hours WHERE coin_id = '{asset}' ORDER BY date_price DESC LIMIT 90"# WHERE date_price >= '{start_date}'"# AND date_price <= '{close_date}'"
   elif tempo ==2:
-    queryy = f"SELECT * FROM four_hours ORDER BY date_price DESC LIMIT 90"# WHERE date_price >= '{start_date}'"# AND date_price <= '{close_date}'"
+    asset = "ethereum"  
+    query = f"SELECT * FROM four_hours WHERE coin_id = '{asset}' ORDER BY date_price DESC LIMIT 90"# WHERE date_price >= '{start_date}'"# AND date_price <= '{close_date}'"
   elif tempo == 3:
-    queryy = f"SELECT * FROM four_days ORDER BY date_price DESC LIMIT 90" # WHERE date_price >= '{start_date}'"# AND date_price <= '{close_date}'"
+    asset = "ripple"  
+    query = f"SELECT * FROM four_days WHERE coin_id = '{asset}' ORDER BY date_price DESC LIMIT 90"# WHERE date_price >= '{start_date}'"# AND date_price <= '{close_date}'"
 
 
   hist = pd.read_sql_query(queryy,db_conection)
