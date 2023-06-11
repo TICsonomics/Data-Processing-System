@@ -1,5 +1,7 @@
 matplotlib==3.6.3
+matplotlib==3.5.1
+mplfinance==0.12.9b7
 pandas==1.5.3
-pandas_ta==0.3.14b
 psycopg2_binary==2.9.6
 SQLAlchemy==1.4.39
+stockstats==0.5.2
