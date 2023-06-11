@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS half_hours(
 	high DECIMAL,
 	low DECIMAL,
 	close DECIMAL,
-	volume DECIMAL,
+	volume DECIMAL
 	--coin_id TEXT NOT NULL,
 	--PRIMARY KEY (price_id),
 	--CONSTRAINT fk_coin_id 
@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS four_hours(
 	high DECIMAL,
 	low DECIMAL,
 	close DECIMAL,
-	volume DECIMAL,
-	coin_id TEXT NOT NULL,
+	volume DECIMAL
+	--coin_id TEXT NOT NULL,
 	--PRIMARY KEY (price_id),
 	--CONSTRAINT fk_coin_id 
 		--FOREIGN KEY (coin_id)
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS four_days(
 	high DECIMAL,
 	low DECIMAL,
 	close DECIMAL,
-	volume DECIMAL,
+	volume DECIMAL
 	--coin_id TEXT NOT NULL,
 	--PRIMARY KEY (price_id),
 	--CONSTRAINT fk_coin_id 
