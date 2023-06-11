@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  db:
+    build: ./database/
+  api_client:
+    build: ./APIclient/
+    depends_on:
+      - db
+  modeling:
+    build: ./processor/
+    depends_on:
+      - db
